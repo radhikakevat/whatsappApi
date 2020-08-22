@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WhatsApp API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style type="text/css">
+    table, th, td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+pre {
+    border-radius: 0 !important;
+	border: none;
+    padding: 0;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    border-radius: 4px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    overflow: auto;
+}
+
+.hljs {
+    white-space: pre;
+    color: #f8f8f2;
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: rgb(38,38,38);
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+code{
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+.hljs-string {
+    color: #E57661;
+}
+
+    </style>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">CHAT API</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">WHATSAPP API</a></li>
+            <li class="nav-item"><a href="request_demo.html" class="nav-link">REQUEST DEMO</a></li>
+            <li class="nav-item"><a href="buy.html" class="nav-link">BUY NOW</a></li>
+            <li class="nav-item active"><a class="nav-link" href="apidocs.html">API DOCS</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">SDK</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">SUPPORT</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+          <div class="row slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 mt-5 text-center col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Whatsapp API documentation</span></p>
+	            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Whatsapp API documentation</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    	
+    	<a href="#" class="btn btn-primary" type="button">Full Documentation</a><br><br>
+    	<p>The REST API allows you to receive and send messages through your WhatsApp account. Sign up now</p>
+    	<p>Parameters in GET queries pass query string. Parameters in POST requests — through the JSON-encoded request body. The authorization token is always passed to query string (?token=xxxxxx).</p>
+    	<p>The WhatsApp API is based on the WhatsApp WEB protocol and excludes the ban both when using libraries from mgp25 and the like. Despite this, your account can be banned by anti-spam system WhatsApp after several clicking the "block" button.</p>
+    	<p><strong>Guides for building a Whatsapp bot</strong>&nbsp;<a href="#">on PHP</a><span>,</span><a href="#">on Python</a><span>,</span><a href="#">on Nodejs</a><span>&nbsp;or&nbsp;</span><a href="#">on C#</a></p>
+    	<h3>GET /status</h3>
+    	<p>Get the account status and QR code for authorization. Reauthorization is necessary only in case of changing the device or manually pressing "Logout on all devices" on the phone. Keep the WhastsApp application open during authorization.</p>
+    	
+    	<table style="width:100%">
+		  <tr>
+		    <td>init</td>
+		    <td>Initial status</td>
+		  </tr>
+		  <tr>
+		    <td>loading</td>
+		    <td>The system is still loading, try again in 1 minute</td>
+		    
+		  </tr>
+		  <tr>
+		    <td>got qr code</td>
+		    <td>There is a QR code and you need to take a picture of it in the Whatsapp application by going to Menu -> WhatsApp Web -> Add. QR code is valid for one minute. <a href="https://ru.stackoverflow.com/questions/358215/%D0%9A%D0%B0%D0%BA-%D0%B2%D1%8B%D0%B2%D0%B5%D1%81%D1%82%D0%B8-%D0%BD%D0%B0-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-base64/358217#358217">Example showing base64 images on a page.</a>
+            Manually easier to get <a href="#">QR-code as an image</a></td>
+	
+		  </tr>
+		  <tr>
+		    <td>authenticated</td>
+		    <td>Authorization passed successfully</td>	    
+		  </tr>		  
+		</table>
+		<h5>Server response example:</h5>
+			<pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"accountStatus"</span>: <span class="hljs-string">"got qr code"</span>,
+	        <span class="hljs-string">"qrCode"</span>: <span class="hljs-string">"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ....."</span>
+	        }
+	    </code></pre>
+	    <h3>GET /qr_code</h3>
+	    <p>Direct link to QR-code in the form of an image, not base64.</p>
+	    <h3>POST /group</h3>
+	    <p>Creates a group and sends the message to the created group. If the host is iPhone, then the presence of all in the contact list is required.</p>
+	    <p>The group will be added to the queue for sending and sooner or later it will be created, even if the phone is disconnected from the Internet or the authorization is not passed.</p>
+	    <p>2 Oct 2018 update: chatId parameter will be returned if group was created on your phone within 20 seconds.</p>
+	    <h3>Request parameters:</h3>
+	    <table style="width:100%">
+		  <tr>
+		    <td>groupName</td>
+		    <td>Group name, string, mandatory.</td>
+		  </tr>
+		  <tr>
+		    <td>phones</td>
+		    <td>An array of phones starting with the country code. You do not need to add your number.
+               USA example: ['17472822486'].</td>
+		  </tr>
+		  <tr>
+		    <td>messageText</td>
+		    <td>Message text, string</td>
+		  </tr>
+		</table>
+		<h5>Server response example:</h5>
+			<pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"phones"</span>: <span class="hljs-string">"["17472822486","79680565372"],"</span>,
+	        <span class="hljs-string">"messageText"</span>: <span class="hljs-string">"Safari is the new IE"</span>,
+	        <span class="hljs-string">"groupName"</span>: <span class="hljs-string">"Browsers",</span>
+	        }
+	    </code></pre>
+	    <h3>POST /sendMessage</h3>
+	    <p>Send a message to a new or existing chat. The message will be added to the queue for sending and delivered even if the phone is disconnected from the Internet or authorization is not passed.</p>
+	    <p>Only one of two parameters is needed to determine the destination - chatId or phone.</p>
+	    <h5>Request parameters:</h5>
+	    <pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"phones"</span>: <span class="hljs-string">"17472822486"</span>,
+	        <span class="hljs-string">"body"</span>: <span class="hljs-string">"Hello, world!"</span>,
+	        }
+	    </code></pre>
+	    <pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"chatId"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+	        <span class="hljs-string">"body"</span>: <span class="hljs-string">"Hello, world!"</span>,
+	        }
+	    </code></pre>
+	    <h5>Server response example:</h5>
+	    <pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"sent"</span>: <span class="hljs-string">true</span>,
+	        <span class="hljs-string">"message"</span>: <span class="hljs-string">"ok"</span>,
+	        }
+	    </code></pre>
+	    <h3>POST /sendFile</h3>
+	    <p>Send a file to a new or existing chat.</p>
+	    <p>Only one of two parameters is needed to determine the destination - chatId or phone.</p>
+	    <h5>Request parameters:</h5>
+	    <table style="width:100%">
+		  <tr>
+		    <td>phone</td>
+		    <td>Required if chatId is not set</td>
+		    <td>The same as <a href="#">POST /sendMessage</a></td>
+		  </tr>
+		  <tr>
+		    <td>chatId</td>
+		    <td>Required if phone is not set</td>
+		    <td>The same as <a href="#">POST /sendMessage</a></td>
+		  </tr>
+		  <tr>
+		    <td>body</td>
+		    <td>Required</td>
+		    <td>HTTP link https://upload.wikimedia.org/wikipedia/ru/3/33/NatureCover2001.jpg
+				Or base64-encoded file with mime data, for example data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...
+				File in form-data input field</td>
+		  </tr>
+		  <tr>
+		  	<td>filename</td>
+		  	<td>Required</td>
+		  	<td>File name, for example 1.jpg or hello.xlsx</td>
+		  </tr>
+		  <tr>
+		  	<td>caption</td>
+		  	<td>Optional</td>
+		  	<td>Text under the photo</td>
+		  </tr>
+		</table>
+		<h5>Request examples:</h5>
+		<pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"chatId"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+	        <span class="hljs-string">"body"</span>: <span class="hljs-string">"https://upload.wikimedia.org/wikipedia/ru/3/33/NatureCover2001.jpg"</span>,
+	        <span class="hljs-string">"filename"</span>: <span class="hljs-string">"cover.jpg"</span>,
+	        }
+	    </code></pre>
+	    <pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"phone"</span>: <span class="hljs-string">"17472822486"</span>,
+	        <span class="hljs-string">"body"</span>: <span class="hljs-string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAMAAACeL25MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkI3OEY5RkZENjkwQjExRTg4NENBQjE1QkFGNzEzOEQ5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkI3OEY5RkZFNjkwQjExRTg4NENBQjE1QkFGNzEzOEQ5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Qjc4RjlGRkI2OTBCMTFFODg0Q0FCMTVCQUY3MTM4RDkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Qjc4RjlGRkM2OTBCMTFFODg0Q0FCMTVCQUY3MTM4RDkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz60+8CVAAAADFBMVEX/zc2ampr/ZmYwMDB/wIlPAAAAGUlEQVR42mJgZmQAQkYGBgYmJiYwwQgQYAAAzQAVpgHCIgAAAABJRU5ErkJggg=="</span>,
+	        <span class="hljs-string">"filename"</span>: <span class="hljs-string">"4x4pixel.jpg"</span>,
+	        }
+	    </code></pre>
+	    <h5>Server response example:</h5>
+	    <pre><code class="language-javascript hljs">
+	       {
+	        <span class="hljs-string">"sent"</span>: <span class="hljs-string">true</span>,
+	        <span class="hljs-string">"message"</span>: <span class="hljs-string">"ok"</span>,
+	        }
+	    </code></pre>
+	    <h3>GET /messages</h3>
+	    <p>Get a list of messages. To receive only new messages, pass the <strong>lastMessageNumber</strong> parameter from the last query.</p>
+	    <p>Files from messages are guaranteed to be stored only for 30 days and can be deleted. Download the files as soon as you get to your server.</p>
+       <h5>Request parameters:</h5>
+        <table style="width:100%">
+		  <tr>
+		    <td>lastMessageNumber</td>
+		    <td>The lastMessageNumber parameter from the last response.</td>
+		  </tr>
+		  <tr>
+		    <td>last</td>
+		    <td>Displays the last 100 messages. If this parameter is passed, then lastMessageNumber is ignored.</td>
+		  </tr>
+		  
+		</table>
+		<h5>Server response example:</h5>
+		<pre><code class="language-javascript hljs"><span class="hljs-comment">// GET /messages?lastMessageNumber=99:</span>
+{
+    <span class="hljs-string">"messages:"</span> [{
+        <span class="hljs-comment">//unique id</span>
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"false_17472822486@c.us_DF38E6A25B42CC8CCE57EC40F"</span>,
+        <span class="hljs-comment">//text message for type "chat" or link to download the file for "ptt", "image", "audio" and "document"</span>
+        <span class="hljs-string">"body"</span>: <span class="hljs-string">"Ok!"</span>,
+        <span class="hljs-comment">//type of the message - "chat" - text, "image" - image, "ptt" - voice, "document" - text document, "audio" - audio file, "call_log" - call</span>
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"chat"</span>,
+        <span class="hljs-comment">//Sender name</span>
+        <span class="hljs-string">"senderName"</span>: <span class="hljs-string">"Ilya"</span>,
+        <span class="hljs-comment">//true - outgoing, false - incoming</span>
+        <span class="hljs-string">"fromMe"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-comment">//Author ID of the message, useful for groups</span>
+        <span class="hljs-string">"author"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+        <span class="hljs-comment">//send time, unix timestamp</span>
+        <span class="hljs-string">"time"</span>: <span class="hljs-number">1504208593</span>,
+        <span class="hljs-comment">//chat ID</span>
+        <span class="hljs-string">"chatId"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+        <span class="hljs-comment">//sequence number of the message in the database</span>
+        <span class="hljs-string">"messageNumber"</span>: <span class="hljs-number">100</span>
+    }, {
+        <span class="hljs-comment">//...</span>
+		    }],
+		    <span class="hljs-string">"lastMessageNumber"</span>: <span class="hljs-number">199</span> <span class="hljs-comment">//next query should be /messages?lastMessageNumber=199</span>
+		}</code></pre>
+   		<h3>POST /webhook</h3>
+   		<p>Sets the URL for receiving webhook notifications of new messages and message delivery events (ack).</p>
+   		<h5>Request parameters:</h5>
+   		<pre><code class="language-javascript hljs">
+   		{
+		    <span class="hljs-string">"set"</span>: <span class="hljs-literal">true</span>,
+		    <span class="hljs-string">"webhookUrl"</span>: <span class="hljs-string">"https://requestb.in/1f9aj261"</span>
+		}</code></pre>
+		<h5>Example of a webhook notification:</h5>
+		<pre><code class="language-javascript hljs">
+{ <span class="hljs-comment">// It has the same JSON payload as /messages has</span>
+  <span class="hljs-comment">// Sending to POST JSON body</span>
+    <span class="hljs-string">"messages"</span>: [{
+        <span class="hljs-comment">//unique id</span>
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"false_17472822486@c.us_DF38E6A25B42CC8CCE57EC40F"</span>,
+        <span class="hljs-comment">//text message for type "chat" or link to download the file for "ptt", "image", "audio" and "document"</span>
+        <span class="hljs-string">"body"</span>: <span class="hljs-string">"Ok!"</span>,
+        <span class="hljs-comment">//type of the message - "chat" - text, "image" - image, "ptt" - voice, "document" - text document, "audio" - audio file, "call_log" - call</span>
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"chat"</span>,
+        <span class="hljs-comment">//Sender name</span>
+        <span class="hljs-string">"senderName"</span>: <span class="hljs-string">"Ilya"</span>,
+        <span class="hljs-comment">//true - outgoing, false - incoming</span>
+        <span class="hljs-string">"fromMe"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-comment">//Author ID of the message, useful for groups</span>
+        <span class="hljs-string">"author"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+        <span class="hljs-comment">//send time, unix timestamp</span>
+        <span class="hljs-string">"time"</span>: <span class="hljs-number">1504208593</span>,
+        <span class="hljs-comment">//chat ID</span>
+        <span class="hljs-string">"chatId"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+        <span class="hljs-comment">//sequence number of the message in the database</span>
+        <span class="hljs-string">"messageNumber"</span>: <span class="hljs-number">100</span>
+    }, {
+        <span class="hljs-comment">//...</span>
+    }],
+    <span class="hljs-string">"ack"</span>: [{<span class="hljs-comment">//message delivered</span>
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"false_17472822486@c.us_DF38E6A25B42CC8CCE57EC40F"</span>,
+        <span class="hljs-string">"queueNumber"</span>: <span class="hljs-number">100</span>
+        <span class="hljs-string">"chatId"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+        <span class="hljs-string">"status"</span>: <span class="hljs-string">"delivered"</span>,
+    },{<span class="hljs-comment">//message viewed</span>
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"false_17472822486@c.us_DF38E6A25B42CC8CCE57EC40F"</span>,
+        <span class="hljs-string">"queueNumber"</span>: <span class="hljs-number">100</span>
+        <span class="hljs-string">"chatId"</span>: <span class="hljs-string">"17472822486@c.us"</span>,
+        <span class="hljs-string">"status"</span>: <span class="hljs-string">"viewed"</span>,
+    }, {
+        <span class="hljs-comment">//...</span>
+    }],
+}</code></pre>
+
+		<h3>GET /webhook</h3>
+		<p>Returns current webhook url.</p>
+		<h5>Server response example:</h5>
+		<pre><code class="language-javascript hljs">
+		{
+		    <span class="hljs-string">"set"</span>: <span class="hljs-literal">true</span>,
+		    <span class="hljs-string">"webhookUrl"</span>: <span class="hljs-string">"https://requestb.in/1f9aj261"</span>
+		}</code></pre>
+		<h3>POST /settings/ackNotificationsOn</h3>
+		<p>Turn on/off ack (message delivered and message viewed) notifications in webhooks. GET method works for the same address.</p>
+		<h5>Request parameters:</h5>
+		<table style="width:100%">
+		  <tr>
+		    <td>ackNotificationsOn</td>
+		    <td>1 (true) or 0 (false) .</td>
+		  </tr>
+		  
+		</table>
+		<h3>GET /logout</h3>
+		<p>Logout from WhatsApp Web to get new QR code.</p>
+		<h5>Server response example:</h5>
+		<pre><code class="language-javascript hljs">
+		{
+		    <span class="hljs-string">"result"</span>: <span class="hljs-string">"Logout request sent to WhatsApp"</span>
+		}</code></pre>
+		<h3>GET /reboot</h3>
+		<p>Reboot your WhatsApp instance.</p>
+		<h5>Server response example:</h5>
+		<pre><code class="language-javascript hljs">
+	{
+        <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>
+        }</code></pre>
+        <h3>GET /showMessagesQueue</h3>
+        <p>Get outbound messages queue.</p>
+        <h5>Server response example:</h5>
+        <pre><code class="language-javascript hljs">{
+        <span class="hljs-string">"totalMessages"</span>:<span class="hljs-number">2</span>,
+        <span class="hljs-string">"first100"</span>:[
+      {
+         <span class="hljs-string">"id"</span>:<span class="hljs-number">1</span>,
+         <span class="hljs-string">"body"</span>:<span class="hljs-string">"Hey!"</span>,
+         <span class="hljs-string">"type"</span>:<span class="hljs-string">"text"</span>,
+         <span class="hljs-string">"chatId"</span>:<span class="hljs-string">"79600005372@c.us"</span>,
+         <span class="hljs-string">"last_try"</span>:<span class="hljs-number">1528320463436</span>,
+         <span class="hljs-string">"metadata"</span>:<span class="hljs-string">"{}"</span>
+      },
+   ]
+       }</code></pre>
+       <h3>GET /clearMessagesQueue</h3>
+       <p>Clear outbound messages queue. This method is needed when you accidentally sent thousands of messages in a row.</p>
+       <h5>Server response example:</h5>
+       <pre><code class="language-javascript hljs">{
+   <span class="hljs-string">"message"</span>:<span class="hljs-string">"Cleared 2 messages"</span>,
+   <span class="hljs-string">"messageTextsExample"</span>:[
+      <span class="hljs-string">"Hello world"</span>,
+      <span class="hljs-string">"Hello world"</span>
+   ]
+}</code></pre>
+<!-- <p>see more in&nbsp;&nbsp;<a href="#" class="btn btn-primary" type="button">Documentation</a></p>
+ -->
+	    </div>
+    
+    </section>
+
+   
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">WebHost</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Unseful Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Servers</a></li>
+                <li><a href="#" class="py-2 d-block">Windos Hosting</a></li>
+                <li><a href="#" class="py-2 d-block">Cloud Hosting</a></li>
+                <li><a href="#" class="py-2 d-block">OS Servers</a></li>
+                <li><a href="#" class="py-2 d-block">Linux Servers</a></li>
+                <li><a href="#" class="py-2 d-block">Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Navigational</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Home</a></li>
+                <li><a href="#" class="py-2 d-block">Domain</a></li>
+                <li><a href="#" class="py-2 d-block">Hosting</a></li>
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Blog</a></li>
+                <li><a href="#" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Office</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

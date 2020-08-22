@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WhatsApp API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+   <style type="text/css">
+
+
+
+  .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 2px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+ 
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #2c7b8e;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: black;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.tabcontent1 {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: black;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.tabcontent2 {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: black;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+  </style>
+ 
+
+  </head
+
+    <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Chat API</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">WHATSAPP API</a></li>
+	          <li class="nav-item"><a href="request_demo.html" class="nav-link">REQUEST DEMO</a></li>
+	          <li class="nav-item"><a href="buy.html" class="nav-link">BUY NOW</a></li>
+	          <li class="nav-item"><a class="nav-link" href="apidocs.html">API DOCS</a></li>
+	          <li class="nav-item"><a href="sdk.html" class="nav-link">SDK</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">SUPPORT</a></li>
+	          <!-- <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get started</span></a></li> -->
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-5 wrap col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">WhatsApp API</h1>
+              <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Enterprise-level API for $39/month.Receive and send messages using HTTP requests.</p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-5 py-xl-3">Free Trial</a> </p>
+            </div>
+            <div class="col-md-7 ftco-animate">
+            	<img src="images/dashboard_full_1.png" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(images/bg_2.jpg);">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-5 wrap col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">The Web Hosting Platform Made for You</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-5 py-xl-3">Get started</a> <a href="#" class="btn btn-primary btn-primary-2 p-3 px-xl-5 py-xl-3">Read more</a></p>
+            </div>
+            <div class="col-md-7 ftco-animate">
+            	<img src="images/dashboard_full_3.png" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="ftco-section services-section bg-light">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-4">THE MOST MULTIFUNCTIONAL API AT THE MOMENT</h2>
+            <p>Send a message to +54 9 11 3633-1413 through WhatsApp and test the API.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<span class="flaticon-guarantee"></span>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">CREATED FOR BUSINESS</h3>
+                <p>Chat API is designed to create chat bots and integrate WhatsApp with business systems: CRM, ERP or a website.Chat API is already used for many projects: sending and reading messages from the CRM-system, recording in the beauty salon, sending details of the vacancy or chat-bot with promotional codes</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<span class="flaticon-shield"></span>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">API FOR DEVELOPERS</h3>
+                <p>Create a chat bot in a couple of hours or integrate into 6,000 dialogs per day in PHP, JavaScript, Google Docs, Python, Java, C# or even VBA.The official closed API WhatsApp WEB under the hood works stably and does not fall when you update WhatsApp - this is our main difference from other solutions.Guides for building a Whatsapp bot on PHP , on Python , on Node.JS or on C#</p>
+              </div>
+            </div>    
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<!-- <div class="row justify-content-center mb-5 pb-5">
+    			<div class="col-md-7 text-center heading-section ftco-animate">
+          </div>
+    		</div> -->
+    		<div class="row">
+          <div class="col-md-12 nav-link-wrap mb-5 pb-md-5 pb-sm-1 ftco-animate">
+            <div class="nav ftco-animate nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-nextgen-tab" data-toggle="pill" href="#v-pills-nextgen" role="tab" aria-controls="v-pills-nextgen" aria-selected="true">Send a message</a>
+
+              <a class="nav-link" id="v-pills-performance-tab" data-toggle="pill" href="#v-pills-performance" role="tab" aria-controls="v-pills-performance" aria-selected="false">Read messages</a>
+
+              <a class="nav-link" id="v-pills-effect-tab" data-toggle="pill" href="#v-pills-effect" role="tab" aria-controls="v-pills-effect" aria-selected="false">Set a Webhook</a>
+            </div>
+          </div>
+          <div class="col-md-12 align-items-center ftco-animate">
+            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-nextgen" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+              	<div class="d-md-flex">
+	              	<div class="one-forth align-self-center">
+                   <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'PHP')" id="defaultOpen">PHP</button>
+                    <button class="tablinks" onclick="openCity(event, 'nodejs')">Node.js</button>
+                    <button class="tablinks" onclick="openCity(event, 'jquery')">JQuery</button>
+                    <button class="tablinks" onclick="openCity(event, 'curl')">Curl</button>
+                  </div>
+
+                  <div id="PHP" class="tabcontent">
+                
+                    <p>$data = [<br>
+                          'phone' => '79995253422', // Receivers <br>
+                          'body' => 'Hello, Andrew!', // Message<br>
+                      ];<br>
+                      $json = json_encode($data); // Encode data to JSON<br>
+                      // URL for request POST /message<br>
+                      $url = 'https://api.chat-api.com/message?token=83763g87x';<br>
+                      // Make a POST request<br>
+                      $options = stream_context_create(['http' => [<br>
+                              'method'  => 'POST',<br>
+                              'header'  => 'Content-type: application/json',<br>
+                              'content' => $json<br>
+                          ]<br>
+                      ]);<br>
+                      // Send a request<br>
+                      $result = file_get_contents($url, false, $options);</p>
+                  </div>
+
+                  <div id="nodejs" class="tabcontent">
+                    <p>var request = require('request'); //bash: npm install request<br>
+                      // URL for request POST /message<br>
+                      var url = 'https://api.chat-api.com/message?token=83763g87x';<br>
+                      var data = {<br>
+                          phone: '79995253422', // Receivers phone<br>
+                          body: 'Hello, Andrew!', // Сообщение<br>
+                      };<br>
+                      // Send a request<br>
+                      request({<br>
+                          url: url,<br>
+                          method: "POST",<br>
+                          json: data<br>
+                      });</p> 
+                  </div>
+
+                  <div id="jquery" class="tabcontent">
+                    <p>// URL for request POST /message<br>
+                        var url = 'https://api.chat-api.com/message?token=83763g87x';<br>
+                        var data = {<br>
+                            phone: '79995253422', // Receivers phone<br>
+                            body: 'Hello, Andrew!', // Message<br>
+                        };<br>
+                        // Send a request<br>
+                        $.ajax(url, {<br>
+                            data : JSON.stringify(data),<br>
+                            contentType : 'application/json',<br>
+                            type : 'POST'<br>
+                        });</p>
+                  </div>
+
+                   <div id="curl" class="tabcontent">
+                    <p>curl \<br>
+                      -d '{"phone": "79995253422","body": "Hello, Andrew!"}' \ # Phone and message<br>
+                      -H "Content-Type: application/json" \ # Headers<br>
+                      -X POST \ # Type = POST<br>
+                      "https://api.chat-api.com/message?token=83763g87x" # URL for request POST /message</p><br>
+                  </div>
+
+	              	</div>
+	              	<div class="one-half ml-md-5 align-self-center">
+		                <h2 class="mb-4">Send a message</h2>
+		              	<p>To a phone number connected to WhatsApp or to a group chat.</p>
+		                <a href="#">API Docs</a><br>
+                     <a href="#">Get an API key</a>
+
+		              </div>
+	              </div>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-performance" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                <div class="d-md-flex">
+	              	<div class="one-forth order-last align-self-center">
+	              		<div class="tab">
+                    <button class="tablinks1" onclick="openCity1(event, 'PHP1')" id="defaultOpen1">PHP</button>
+                    <button class="tablinks1" onclick="openCity1(event, 'nodejs1')">Node.js</button>
+                    <button class="tablinks1" onclick="openCity1(event, 'jquery1')">JQuery</button>
+                    <button class="tablinks1" onclick="openCity1(event, 'curl1')">Curl</button>
+                  </div>
+
+                  <div id="PHP1" class="tabcontent1">
+                
+                    <p>// URL for request GET /messages<br>
+                      $url = 'https://api.chat-api.com/messages?token=83763g87x';<br>
+                      $result = file_get_contents($url); // Send a request<br>
+                      $data = json_decode($result, 1); // Parse JSON<br>
+                      foreach($data['messages'] as $message){ // Echo every message<br>
+                          echo "Sender:".$message['author']."<br>";
+                          echo "Message: ".$message['body']."<br>";
+                      }</p>
+                  </div>
+
+                  <div id="nodejs1" class="tabcontent1">
+                    <p>var request = require('request');// npm install request<br>
+                        var url = 'https://api.chat-api.com/messages?token=83763g87x';<br>
+                        request(url, function (error, response, body) { // Make a GET request<br>
+                            if (error) return console.error('HTTP Error', error);<br>
+                            // Parse a response<br>
+                            var data = JSON.parse(body);<br>
+                            // For each message<br>
+                            for (var i = 0; i < data.messages.length; i++) {<br>
+                                var message = data.messages[i];<br>
+                                console.log(message.author + ': ' + message.body); //Send it to console<br>
+                            }<br>
+                        });</p> 
+                  </div>
+
+                  <div id="jquery1" class="tabcontent1">
+                    <p>var url = 'https://api.chat-api.com/messages?token=83763g87x';<br>
+                        $.get(url, function (data) { // Make a GET request<br>
+                            for (var i = 0; i < data.messages.length; i++) { // For each message<br>
+                                var message = data.messages[i];<br>
+                                console.log(message.author + ': ' + message.body); //Send it to console<br>
+                            }<br>
+                        });</p>
+                  </div>
+
+                   <div id="curl1" class="tabcontent1">
+                    <p># Just a GET request<br>
+                        curl "https://api.chat-api.com/message?token=83763g87x"</p>
+                  </div>
+
+	              	</div>
+	              	<div class="one-half order-first mr-md-5 align-self-center">
+		                <h2 class="mb-4">Read messages</h2>
+		              	<p>History of WhatsApp conversations in personal and group chats, including before connecting the API</p>
+		                 <a href="#">API Docs</a><br>
+                     <a href="#">Get an API key</a>
+		              </div>
+	              </div>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-effect" role="tabpanel" aria-labelledby="v-pills-effect-tab">
+                <div class="d-md-flex">
+	              	<div class="one-forth align-self-center">
+	              		<div class="tab">
+                    <button class="tablinks2" onclick="openCity2(event, 'PHP2')" id="defaultOpen2">PHP</button>
+                    <button class="tablinks2" onclick="openCity2(event, 'nodejs2')">Node.js</button>
+                 
+                  </div>
+
+                  <div id="PHP2" class="tabcontent2">
+                
+                    <p>// First of all - set a webhook to URL like http://your_website.com/my_webhook_url.php<br>
+
+                      // Parse a webhook data<br>
+                      $data = json_decode(file_get_contents('php://input'), true);<br>
+                      foreach($data['messages'] as $message){ // Echo every message<br>
+                          // Handle every message here<br>
+                          // Add to the database or generate a response<br>
+                      }</p>
+                  </div>
+
+                  <div id="nodejs2" class="tabcontent2">
+                    <p>// First of all - set a webhook to URL like http://your_website.com/my_webhook_url<br>
+
+                      // Require Express JS и Body Parser for JSON POST acceptance<br>
+                      var app = require('express')();<br>
+                      var bodyParser = require('body-parser');<br>
+                      app.use(bodyParser.json());<br>
+
+                      // Handle POST request<br>
+                      app.post('/my_webhook_url', function (req, res) {<br>
+                          var data = req.body; // New messages in the "body" variable<br>
+                          for (var i = 0; i < data.messages.length; i++) { // For each message<br>
+                              var message = data.messages[i];<br>
+                              console.log(message.author + ': ' + message.body); //Send it to console<br>
+                          }<br>
+                          res.send('Ok'); //Response does not matter<br>
+                      });<br>
+
+                      app.listen(80);</p> 
+                  </div>
+
+                  
+
+	              	</div>
+	              	<div class="one-half ml-md-5 align-self-center">
+		                <h2 class="mb-4">Set a Webhook</h2>
+		              	<p>Receive notifications about personal and group messages through incoming http requests to your server. This is the main function for creating a chatbot.</p>
+		                <a href="#">API Docs</a><br>
+                     <a href="#">Get an API key</a>
+		              </div>
+	              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Pricing Plans</span>
+            <h2 class="mb-4">Our Best Pricing</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">Free</h2>
+                <span class="price"><sup>$</sup> <span class="number">0</span></span>
+                <span class="excerpt d-block">100% free. Forever</span>
+                <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+                
+                <ul class="pricing-text mb-4">
+                  <li><strong>150 GB</strong> Bandwidth</li>
+                  <li><strong>100 GB</strong> Storage</li>
+                  <li><strong>$1.00 / GB</strong> Overages</li>
+                  <li>All features</li>
+                </ul>
+                <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">Startup</h2>
+                <span class="price"><sup>$</sup> <span class="number">19</span></span>
+                <span class="excerpt d-block">All features are included</span>
+                <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+                
+                <ul class="pricing-text mb-4">
+                  <li><strong>450 GB</strong> Bandwidth</li>
+                  <li><strong>400 GB</strong> Storage</li>
+                  <li><strong>$2.00 / GB</strong> Overages</li>
+                  <li>All features</li>
+                </ul>
+                <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">Premium</h2>
+                <span class="price"><sup>$</sup> <span class="number">49</span></span>
+                <span class="excerpt d-block">All features are included</span>
+                <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+                
+                <ul class="pricing-text mb-4">
+                  <li><strong>250 GB</strong> Bandwidth</li>
+                  <li><strong>200 GB</strong> Storage</li>
+                  <li><strong>$5.00 / GB</strong> Overages</li>
+                  <li>All features</li>
+                </ul>
+                <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">Pro</h2>
+                <span class="price"><sup>$</sup> <span class="number">99</span></span>
+                <span class="excerpt d-block">All features are included</span>
+                <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+                
+                <ul class="pricing-text mb-4">
+                  <li><strong>450 GB</strong> Bandwidth</li>
+                  <li><strong>400 GB</strong> Storage</li>
+                  <li><strong>$20.00 / GB</strong> Overages</li>
+                  <li>All features</li>
+                </ul>
+                <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="ftco-section ftco-partner">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-4">WhatsApp API SDKs</h2>
+            <p>You can configure the SDK or generate other SDKs in 30+ programming languages: Chat API SDK generator.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/windows.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">C#  .Net</p>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/android.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Android</p>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/apple.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Objective-C</p>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/php.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">PHP</p>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/ruby.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Ruby</p>
+    			</div>
+ 
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="images/python.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Python</p>
+          </div>
+           <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="images/angular.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Angular Js</p>
+          </div>
+           <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="images/nodejs.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Node</p>
+          </div>
+           <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="images/golang.png" class="img-fluid" alt="Colorlib Template"></a>
+            <p style="color:white;font-weight: bold;text-align: center;">Go</p>
+          </div>
+                 
+    		</div>
+    	</div>
+    </section>
+
+<section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <span class="subheading">Customer Says</span>
+            <h2 class="mb-4">Our satisfied customer says</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">WebHost</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Unseful Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Servers</a></li>
+                <li><a href="#" class="py-2 d-block">Windos Hosting</a></li>
+                <li><a href="#" class="py-2 d-block">Cloud Hosting</a></li>
+                <li><a href="#" class="py-2 d-block">OS Servers</a></li>
+                <li><a href="#" class="py-2 d-block">Linux Servers</a></li>
+                <li><a href="#" class="py-2 d-block">Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Navigational</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Home</a></li>
+                <li><a href="#" class="py-2 d-block">Domain</a></li>
+                <li><a href="#" class="py-2 d-block">Hosting</a></li>
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Blog</a></li>
+                <li><a href="#" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Office</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+
+<script>
+function openCity1(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks1");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen1").click();
+
+</script>
+
+
+<script>
+function openCity2(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent2");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen2").click();
+
+</script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
